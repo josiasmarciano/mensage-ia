@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensage.IA - Mensagens Personalizadas com Inteligência Artificial</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Mensage.IA - Crie mensagens personalizadas e criativas para todas as ocasiões usando Inteligência Artificial. Dê o tom, nós damos o texto.">
+    <meta name="keywords" content="IA, gerador de mensagens, textos criativos, mensagens de aniversário, inteligência artificial, textos prontos">
+    <meta name="author" content="Mensage.IA">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mensage-ia.vercel.app/">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mensage.IA - Dê o tom, nós damos o texto">
+    <meta property="og:description" content="Gere mensagens exclusivas com IA para aniversários, agradecimentos, trabalho e muito mais.">
+    <meta property="og:url" content="https://mensage-ia.vercel.app/">
+    <meta property="og:site_name" content="Mensage.IA">
+    <meta property="og:image" content="https://mensage-ia.vercel.app/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 256 256%22><rect width=%22192%22 height=%22128%22 x=%2248%22 y=%2264%22 rx=%2216%22 fill=%22%2314b8a6%22 stroke=%22%231e1b4b%22 stroke-width=%2216%22/><path d=%22M48,80l96,72,96-72%22 fill=%22none%22 stroke=%22%231e1b4b%22 stroke-width=%2216%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/><line x1=%220%22 y1=%22100%22 x2=%2232%22 y2=%22100%22 stroke=%22%231e1b4b%22 stroke-width=%2216%22 stroke-linecap=%22round%22/><line x1=%22-8%22 y1=%22128%22 x2=%2224%22 y2=%22128%22 stroke=%22%231e1b4b%22 stroke-width=%2216%22 stroke-linecap=%22round%22/><line x1=%220%22 y1=%22156%22 x2=%2232%22 y2=%22156%22 stroke=%22%231e1b4b%22 stroke-width=%2216%22 stroke-linecap=%22round%22/></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo" id="logo-trigger" style="cursor: pointer;">
+                <div class="logo-box" style="background: transparent; box-shadow: none;">
+                    <svg width="44" height="44" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="180" height="120" x="55" y="68" rx="12" fill="#14b8a6" stroke="#1e1b4b" stroke-width="16"/>
+                        <path d="M55 80L145 148L235 80" stroke="#1e1b4b" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="10" y1="104" x2="42" y2="104" stroke="#1e1b4b" stroke-width="16" stroke-linecap="round"/>
+                        <line x1="0" y1="128" x2="32" y2="128" stroke="#1e1b4b" stroke-width="16" stroke-linecap="round"/>
+                        <line x1="10" y1="152" x2="42" y2="152" stroke="#1e1b4b" stroke-width="16" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">MENSAGE<span class="highlight">.IA</span></span>
+                    <p>Dê o tom, nós damos o texto.</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="back-btn" class="nav-back hidden" aria-label="Voltar para a etapa anterior">
+                    <i class="ph ph-arrow-left" aria-hidden="true"></i> VOLTAR
+                </button>
+                <div class="theme-switch-wrapper">
+                    <i class="ph-bold ph-sun sun-icon" aria-hidden="true" title="Modo Claro"></i>
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" aria-label="Alternar entre modo claro e escuro" />
+                        <div class="slider round"></div>
+                    </label>
+                    <i class="ph-bold ph-moon moon-icon" aria-hidden="true" title="Modo Escuro"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        
+        <!-- STEP 1: CATEGORIES -->
+        <section id="step-categories" class="step active">
+            <div class="intro">
+                <h1>Que mensagem vamos criar hoje?</h1>
+                <p>"A palavra certa para o seu momento exato."</p>
+            </div>
+            
+            <div class="category-grid">
+                <div class="category-card" data-category="aniversario">
+                    <div class="icon-circle bg-pink">
+                        <i class="ph-fill ph-cake"></i>
+                    </div>
+                    <h3>Aniversário</h3>
+                    <p>Comemore a vida.</p>
+                    <i class="ph ph-caret-right arrow"></i>
+                </div>
+                
+                <div class="category-card" data-category="promocao">
+                    <div class="icon-circle bg-blue">
+                        <i class="ph-fill ph-trophy"></i>
+                    </div>
+                    <h3>Promoção</h3>
+                    <p>Sucesso profissional.</p>
+                    <i class="ph ph-caret-right arrow"></i>
+                </div>
+                
+                <div class="category-card" data-category="agradecimento">
+                    <div class="icon-circle bg-red">
+                        <i class="ph-fill ph-heart"></i>
+                    </div>
+                    <h3>Agradecimento</h3>
+                    <p>Demonstre sua gratidão.</p>
+                    <i class="ph ph-caret-right arrow"></i>
+                </div>
+                
+                <div class="category-card" data-category="condolencias">
+                    <div class="icon-circle bg-grey">
+                        <i class="ph-fill ph-flower-tulip"></i>
+                    </div>
+                    <h3>Condolências</h3>
+                    <p>Respeito e memória.</p>
+                    <i class="ph ph-caret-right arrow"></i>
+                </div>
+                
+                <div class="category-card" data-category="motivacional">
+                    <div class="icon-circle bg-yellow">
+                        <i class="ph-fill ph-smiley"></i>
+                    </div>
+                    <h3>Motivacional</h3>
+                    <p>Incentive alguém.</p>
+                    <i class="ph ph-caret-right arrow"></i>
+                </div>
+                
+                <div class="category-card" data-category="tema-livre">
+                    <div class="icon-circle bg-purple">
+                        <i class="ph-fill ph-note-pencil"></i>
+                    </div>
+                    <h3>Escrita Livre</h3>
+                    <p>Sua ideia aqui.</p>
+                    <i class="ph ph-caret-right arrow"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 2: CONFIGURATION -->
+        <section id="step-config" class="step">
+            <div class="card-panel">
+                <h2 class="panel-title">CONFIGURAÇÃO</h2>
+                
+                <div class="config-group">
+                    <label>PARA QUEM É?</label>
+                    <div class="chips-group" id="relation-chips">
+                        <button class="chip" data-value="familiar">Familiar</button>
+                        <button class="chip" data-value="amigo">Amigo</button>
+                        <button class="chip" data-value="colega">Colega de Trabalho</button>
+                        <button class="chip" data-value="chefe">Chefe</button>
+                        <button class="chip" data-value="parceiro">Parceiro(a)</button>
+                    </div>
+                </div>
+
+                <div class="config-group">
+                    <label>ESCOLHA O TOM</label>
+                    <div class="chips-group" id="tone-chips">
+                        <button class="chip" data-value="carinhoso">CARINHOSO</button>
+                        <button class="chip" data-value="formal">FORMAL</button>
+                        <button class="chip" data-value="informal">INFORMAL</button>
+                        <button class="chip" data-value="objetivo">OBJETIVO</button>
+                        <button class="chip" data-value="engracado">ENGRAÇADO</button>
+                        <button class="chip" data-value="inspirador">INSPIRADOR</button>
+                    </div>
+                </div>
+
+                <div class="config-group">
+                    <label>QUAL O TAMANHO?</label>
+                    <div class="chips-group" id="length-chips">
+                        <button class="chip" data-value="curto">CURTO</button>
+                        <button class="chip" data-value="medio">MÉDIO</button>
+                        <button class="chip" data-value="longo">LONGO</button>
+                    </div>
+                </div>
+
+                <div class="config-group">
+                    <label>CONTEXTO EXTRA (OPCIONAL)</label>
+                    <textarea id="extra-context" placeholder="Ex: É para uma amiga que acaba de mudar de casa..."></textarea>
+                </div>
+
+                <button id="generate-trigger" class="btn-primary">
+                    GERAR MENSAGENS ✨
+                </button>
+            </div>
+        </section>
+
+        <!-- STEP 3: LOADING -->
+        <section id="step-loading" class="step">
+            <div class="writing-indicator">
+                <div class="indicator-header">
+                    <i class="ph ph-paper-plane-tilt"></i>
+                </div>
+                <div class="writing-box">
+                    <p id="loading-text">A redigir a primeira</p>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEP 4: RESULTS -->
+        <section id="step-results" class="step">
+            <div class="results-intro">
+                <h2>Escolha a sua 🪄</h2>
+            </div>
+            
+            <div id="results-list" class="results-container">
+                <!-- Result cards injected here -->
+            </div>
+
+            <div class="results-actions">
+                <button id="new-suggestions-btn" class="btn-outline">
+                    <i class="ph ph-arrow-counter-clockwise"></i> NOVAS SUGESTÕES
+                </button>
+                <button id="new-message-btn" class="btn-primary-small">
+                    <i class="ph ph-plus"></i> NOVA MENSAGEM
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>MENSAGE.IA • CONECTANDO PESSOAS COM INTELIGÊNCIA</p>
+    </footer>
+
+    <div id="toast" class="toast">Mensagem copiada!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
