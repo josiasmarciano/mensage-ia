@@ -135,8 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
             renderResults(messages);
             goToStep('step-results');
         } catch (error) {
-            console.error("Erro na geração:", error);
-            alert("Oops! Tivemos um probleminha para gerar suas mensagens. Verifique sua conexão ou tente novamente em instantes.");
+            console.error("Erro completo:", error);
+            if (error.message.includes('429') || error.message.includes('exhausted')) {
+                alert("Aguarde um momento! O Google atingiu o limite de mensagens gratuitas. Tente novamente em 2 minutos.");
+            } else {
+                alert(`Oops! Houve um erro (${error.message}). Verifique sua conexão ou tente novamente.`);
+            }
             goToStep('step-config');
         }
     });
