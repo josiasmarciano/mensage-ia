@@ -7,6 +7,7 @@ on:
       - master
     paths:
       - 'supabase/functions/**'
+      - '.github/workflows/**'
 
 jobs:
   deploy:
@@ -14,14 +15,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Supabase CLI
-        uses: supabase/setup-cli@v1
+        uses: supabase/setup-cli@v3
         with:
           version: latest
 
       - name: Deploy Edge Function
-        run: supabase functions deploy generate-message --project-ref kthywyatpbvqnnzcygfd
+        run: |
+          supabase functions deploy generate-message --project-ref kthywyatpbvqnnzcygfd --no-verify-jwt
         env:
           SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
